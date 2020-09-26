@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">My First App</string>
+    <string name="type_your_name">Digite su nombre</string>
+    <string name="type_your_last_name">Digite su apellido</string>
+    <string name="lbl_gender">Género:</string>
+    <string name="lbl_fecha_nacimiento">Nacimiento</string>
+    <string name="lbl_programming">¿Le gusta programar?</string>
+    <string name="si">Si</string>
+    <string name="no">no</string>
+    <string name="lbl_lenguajes">Lenguajes:</string>
+    <string name="java">Java</string>
+    <string name="python">Python</string>
+    <string name="c">C#</string>
+    <string name="go">Go</string>
+    <string name="js">JS</string>
+    <string name="c_c">C/C++</string>
+    <string name="send">Enviar</string>
+    <string name="clean">Limpiar</string>
+    <string name="hola_mi_nombre_es">Hola! Mi nombre es:</string>
+    <string name="soy">Soy </string>
+    <string name="y_nac_en">, y nací en</string>
+    <string name="mis_lenguajes_favoritos_son">Mis lenguajes favoritos son:</string>
+    <string-array name="genders">
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+</resources>
