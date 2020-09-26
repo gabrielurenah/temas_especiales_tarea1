@@ -129,11 +129,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         }
-        if (mProgramming.getCheckedRadioButtonId() == R.id.radio_yes
-                && (mJava.isChecked() || mJavascript.isChecked() || mPython.isChecked()
-                || mGolang.isChecked() || mCSharp.isChecked() || mCCPlusPlus.isChecked())) {
-            return false;
-        } else return true;
+        return false;
     }
 
     public void sendData(View v) {

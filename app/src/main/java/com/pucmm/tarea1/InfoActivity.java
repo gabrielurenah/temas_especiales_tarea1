@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 public class InfoActivity extends AppCompatActivity {
 
@@ -20,6 +22,8 @@ public class InfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
+
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         mFullName = findViewById(R.id.full_name);
         mGender = findViewById(R.id.user_gender);
@@ -37,7 +41,16 @@ public class InfoActivity extends AppCompatActivity {
             mProgramming.setText(form.get(MainActivity.PROGRAMMING));
             mLanguages.setText(form.get(MainActivity.LANGUAGES));
         }
+    }
 
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
